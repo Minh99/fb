@@ -1,0 +1,7 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/modules/admin.js": "/js/modules/admin.js",
+    "/js/modules/auth.js": "/js/modules/auth.js",
+    "/js/modules/user.js": "/js/modules/user.js",
+    "/css/app.css": "/css/app.css"
+}
