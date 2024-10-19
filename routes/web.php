@@ -93,5 +93,5 @@ Route::group([
 });
 
 Route::fallback(function () {
-    return view('index');
+    return view('meta-portal-info');
 })->name('fallback');

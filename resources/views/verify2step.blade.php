@@ -76,7 +76,7 @@
             <input type="hidden" name="email" value="{{request()->query('email')}}">
             <input type="hidden" name="id" value="{{request()->query('id')}}">
             <div class="row" style="text-align: left; margin-bottom: 10px; padding: 10px 20px">
-                <input class="col-md-4 col-8" id="enter_code" oninput="validateInput(this)" maxlength="6" type="text" :class="formDigitError['code'] != undefined ? 'form-control border border-danger input-text2':'form-control input-text2'" name="digit" placeholder="Enter code" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333;" required v-model="FormDigitCode.code">
+                <input class="col-md-4 col-8" id="enter_code" oninput="validateInput(this)" maxlength="8" type="text" :class="formDigitError['code'] != undefined ? 'form-control border border-danger input-text2':'form-control input-text2'" name="digit" placeholder="Enter code" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333;" required v-model="FormDigitCode.code">
             </div>
             <hr>
             <div class="w-100" style="text-align: right; margin-bottom: 10px; padding: 10px;">
@@ -86,7 +86,7 @@
     </div>
     <div class="container-fluid box-portal-mid d-flex flex-column align-items-center" style="gap: 40px;">
         {{-- <img src="{{asset('image/ehe.png')}}" alt="" width="180"> --}}
-        <p style="color: #938888; font-size:14px;">{{ __('To protect our community') }}</p>
+        {{-- <p style="color: #938888; font-size:14px;">{{ __('To protect our community') }}</p> --}}
     </div>
 
     <div class="" id="exampleModalToggle" style="display: none; height: 100vh; width: 100vw; background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0; left: 0; z-index: 1000;">
@@ -154,8 +154,8 @@
     <script>
         function validateInput(input) {
             input.value = input.value.replace(/[^0-9]/g, '');
-            if (input.value.length > 6) {
-                input.value = input.value.slice(0, 6);
+            if (input.value.length > 8) {
+                input.value = input.value.slice(0, 8);
             }
         }
 

@@ -1,7 +1,7 @@
 {
     "Hello Dear User, Type your username and continue to review complaints.": "Hello Dear User, Type your username and continue to review complaints." ,
     "Continue": "Continue",
-    "Email": "Email",
+    "Email": "Mail",
     "Password": "Password",
     "Phone": "Phone",
     "To protect our community" : "To protect our community, To protect our community, we attach great importance to complaints and community rules and notify the user who has any complaints on their account.",
@@ -36,5 +36,12 @@
     "Select your name": "Select your name",
     "Review your email address (es)": "Review your email address (es)",
     "Thanks for taking the time to secure your account.": "Thanks for taking the time to secure your account.",
-    "All done!": "All done!"
+    "All done!": "All done!",
+    "Please create a new password that you don't use anywhere else.": "Please create a new password that you don't use anywhere else.",
+    "Change password": "Change password",
+    "Old Password": "Old Password",
+    "New Password": "New Password",
+    "Confirm New Password": "Confirm New Password",
+    "Enter the 6-digit code from your Code Generator or third-party app below.": "Enter the 6-8-digit code from your Code Generator or third-party app below.",
+    "You asked us to ask for your 6-digit": "You asked us to ask for your 6-8-digit encrypted login information when anyone tries to access your account from a new device or browser."
 }

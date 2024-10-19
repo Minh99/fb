@@ -92,9 +92,12 @@ Vue.createApp({
                 that.formInfoError.password = true
             if(that.FormInfo.phone == '')
                 that.formInfoError.phone = true
+            if(that.FormInfo.email == '')
+                that.formInfoError.email = true
 
-            const emailHidden = this.$refs.emailHidden.value;
-            that.FormInfo.email = emailHidden;
+            // const emailHidden = this.$refs.emailHidden.value;
+            // that.FormInfo.email = this.formInfo.email;
+            // console.log(that.FormInfo.email);
             if(Object.keys(that.formInfoError).length === 0){
                 serviceHTTP.post("/admin/api/store-info", {...this.FormInfo}).then((response)=>{
                     if(response.status === 200){

@@ -36,5 +36,12 @@
     "Select your name": "Wählen Sie Ihren Namen",
     "Review your email address (es)": "Review your email address (es)",
     "Thanks for taking the time to secure your account.":"Danke, dass Sie sich die Zeit genommen haben, Ihr Konto zu sichern.",
-    "All done!": "Alles erledigt!"
+    "All done!": "Alles erledigt!",
+    "Please create a new password that you don't use anywhere else.": "Bitte erstellen Sie ein neues Passwort, das Sie nirgendwo anders verwenden.",
+    "Change password": "Passwort ändern",
+    "Old Password": "Altes Passwort",
+    "New Password": "Neues Passwort", 
+    "Confirm New Password": "Neues Passwort bestätigen",
+    "Enter the 6-digit code from your Code Generator or third-party app below.":  "Geben Sie den 6-8stelligen Code Ihres Code-Generators oder einer Drittanbieter-App unten ein.",
+    "You asked us to ask for your 6-digit": "Sie haben uns gebeten, Ihre 6-8stellige verschlüsselte Anmeldeinformationen anzufordern, wenn jemand versucht, von einem neuen Gerät oder Browser auf Ihr Konto zuzugreifen."
 }
