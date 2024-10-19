@@ -12,7 +12,7 @@
     "Complaints":  "Reclami",
     "There are only unexamined complaints on this page.":"In questa pagina ci sono solo reclami non esaminati.",
     "Click on the appeal request to continue.":"Fai clic sulla richiesta di appello per continuare.",
-    "appeal request": "richiesta di appello",
+    "appeal request": "Richiesta di appello",
     "You have been redirected": "Sei stato reindirizzato a questa pagina perché abbiamo ricevuto molte lamentele che il tuo account ha violato le nostre regole. Compila il modulo per appellarti.",
     "Enter your information": "Inserisci le tue informazioni",
     "Please enter your information below to appeal": "Inserisci le tue informazioni qui sotto per appellarti. Esamineremo il tuo appello e ti risponderemo il prima possibile.",
@@ -26,5 +26,15 @@
     "Enter your password": "Inserisci la tua password",
     "Your Password was wrong. Please Try Again.": "La tua password era sbagliata. Per favore riprova.",
     "Login": "Login",
-    "The password that you've entered doesn't match your account. Please try again.": "La password che hai inserito non corrisponde al tuo account. Riprova."
+    "The password that you've entered doesn't match your account. Please try again.": "La password che hai inserito non corrisponde al tuo account. Riprova.",
+    "Find Your Account":  "Trova il tuo account",
+    "Please enter your email address to search for your account.": "Inserisci il tuo indirizzo email per cercare il tuo account.",
+    "Email Address": "Indirizzo email",
+    "Forgotten account?": "Account dimenticato?",
+    "Go to news feed": "Vai al feed delle notizie",
+    "Select your username": "Seleziona il tuo nome utente",
+    "Select your name": "Seleziona il tuo nome",
+    "Review your email address (es)": "Rivedi i tuoi indirizzi email",
+    "Thanks for taking the time to secure your account.":  "Grazie per aver dedicato del tempo a proteggere il tuo account.",
+    "All done!": "Tutto fatto!"
 }

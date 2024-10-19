@@ -2,6 +2,8 @@
 @section('style')
     <style>
         .complaints {
+            margin-top: -45px;
+            background: #ffffff;
             height: 51vh;
             overflow-y: scroll;
             width: 100%;
@@ -19,10 +21,11 @@
 
         .box-portal-mid {
             width: 100%;
+            max-width: 843px;
             text-align: center;
             font-family: 'PT Sans', sans-serif;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         .box-portal-bot {
@@ -197,7 +200,7 @@
             </div>
         </form>
     </div>
-    <div class="container-fluid box-portal-mid d-flex flex-column align-items-center" style="gap: 40px;">
+    <div class="container-fluid box-portal-mid d-flex flex-column align-items-center" style="">
         {{-- <img src="{{ asset('image/ehe.png') }}" alt="" width="180"> --}}
         <p style="color: #938888; font-size:14px;">{{ __('To protect our community') }}</p>
     </div>

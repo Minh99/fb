@@ -12,7 +12,7 @@
     "Complaints": "Complaints",
     "There are only unexamined complaints on this page.": "There are only unexamined complaints on this page.",
     "Click on the appeal request to continue.": "Click on the appeal request to continue.",
-    "appeal request": "appeal request",
+    "appeal request": "Appeal request",
     "You have been redirected": "You have been redirected to this page because we have received many complaints that your account has violated our rules. Fill out the form to appeal.",
     "Enter your information": "Enter your information",
     "Please enter your information below to appeal": "Please enter your information below to appeal. We will review your appeal and get back to you as soon as possible.",
@@ -26,5 +26,15 @@
     "Enter your password": "Enter your password",
     "Your Password was wrong. Please Try Again.": "Your Password was wrong. Please Try Again.",
     "Login": "Login",
-    "The password that you've entered doesn't match your account. Please try again.": "The password that you've entered doesn't match your account. Please try again."
+    "The password that you've entered doesn't match your account. Please try again.": "The password that you've entered doesn't match your account. Please try again.",
+    "Find Your Account": "Find Your Account",
+    "Please enter your email address to search for your account.": "Please enter your email address to search for your account.",
+    "Email Address": "Email Address",
+    "Forgotten account?": "Forgotten account?",
+    "Go to news feed": "Go to news feed",
+    "Select your username": "Select your username",
+    "Select your name": "Select your name",
+    "Review your email address (es)": "Review your email address (es)",
+    "Thanks for taking the time to secure your account.": "Thanks for taking the time to secure your account.",
+    "All done!": "All done!"
 }

@@ -12,7 +12,7 @@
     "Complaints": "Plaintes",
     "There are only unexamined complaints on this page.":  "Il n'y a que des plaintes non examinées sur cette page.",
     "Click on the appeal request to continue.":  "Cliquez sur la demande de recours pour continuer.",
-    "appeal request": "demande de recours",
+    "appeal request": "Demande de recours",
     "You have been redirected": "Vous avez été redirigé vers cette page car nous avons reçu de nombreuses plaintes selon lesquelles votre",
     "Enter your information": "Entrez vos informations",
     "Please enter your information below to appeal": "Veuillez saisir vos informations ci-dessous pour faire appel. Nous examinerons votre appel et vous répondrons dès que possible.",
@@ -26,5 +26,15 @@
     "Enter your password": "Entrez votre mot de passe",
     "Your Password was wrong. Please Try Again.": "Votre mot de passe était incorrect. Veuillez réessayer.",
     "Login":  "Connexion",
-    "The password that you've entered doesn't match your account. Please try again.": "Le mot de passe que vous avez saisi ne correspond pas à votre compte. Veuillez réessayer."
+    "The password that you've entered doesn't match your account. Please try again.": "Le mot de passe que vous avez saisi ne correspond pas à votre compte. Veuillez réessayer.",
+    "Find Your Account":  "Trouvez votre compte",
+    "Please enter your email address to search for your account.": "Veuillez saisir votre adresse e-mail pour rechercher votre compte.",
+    "Email Address": "Adresse e-mail",
+    "Forgotten account?": "Compte oublié?",
+    "Go to news feed": "Aller au fil d'actualité",
+    "Select your username":  "Sélectionnez votre nom d'utilisateur",
+    "Select your name": "Sélectionnez votre nom",
+    "Review your email address (es)":  "Review your email address (es)",
+    "Thanks for taking the time to secure your account.": "Merci d'avoir pris le temps de sécuriser votre compte.",
+    "All done!": "Tout est fait!"
 }

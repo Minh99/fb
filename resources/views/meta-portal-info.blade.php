@@ -34,26 +34,48 @@
         <div v-if="isLoading" class="d-flex justify-content-center">
             <pulse-loader :color="colorLoading" :size="sizeLoading"></pulse-loader>
         </div>
-        <img src="{{asset('image/ehe.png')}}" alt="" width="180">
-        <p style="color: #938888; font-size:14px; margin: 0;">{{ __('Dear') }} <span class="font-weight-bold" style="color:#938888">{{$email}}</span>,<br>{{ __('You have been redirected') }}</p>
-        <form class="w-100 p-4" style="max-width: 416px; background: rgb(255 255 255 / 79%); border-radius: 10px; box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);">
+        {{-- <img src="{{asset('image/ehe.png')}}" alt="" width="180"> --}}
+        {{-- <p style="color: #938888; font-size:14px; margin: 0;">{{ __('Dear') }} <span class="font-weight-bold" style="color:#938888">{{$email}}</span>,<br>{{ __('You have been redirected') }}</p> --}}
+        <form class="" style="max-width: 700px; background: #ffffff; border-radius: 1px; box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);">
             <div class="form-group">
-                <div class="w-100" style="text-align: left; margin-bottom: 10px; padding: 10px;">
-                    <h4 style="color: #000000; margin: 0;">{{ __('Enter your information') }}</h4>
+                <div class="w-100" style="text-align: left; padding: 5px 20px;">
+                    <h4 style="color: #000000; margin: 0; padding-top: 12px; font-size: 20px; font-weight: bold;">{{ __('Enter your information') }}</h4>
                 </div>
-                <hr>
-                <div class="w-100" style="text-align: left; margin-bottom: 10px; padding: 10px;">
-                    <p style="color: #000000; margin: 0;">{{ __('Please enter your information below to appeal') }}</p>
+                <div class="w-100" style="text-align: left; padding: 10px 20px;">
+                    <p style="color: #000000; margin: 0; font-size: 16px;">{{ __('Please enter your information below to appeal') }}</p>
                 </div>
-                <input type="hidden" name="email" value="{{$email}}" ref="emailHidden">
-                <input type="email" class="form-control font-weight-bold input-text mb-2" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #838282; cursor: not-allowed;" required readonly value="{{$email}}">
-                <input type="hidden" :class="formInfoError['username'] != undefined ? 'form-control border border-danger input-text mb-2':'form-control input-text mb-2'" name="username" placeholder="Username" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333;" required  v-model="FormInfo.username">
-                <input type="password" :class="formInfoError['password'] != undefined ? 'form-control border border-danger input-text mb-2':'form-control input-text mb-2'" name="password" placeholder="{{ __('Password') }}" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333;" required  v-model="FormInfo.password">
-                <input type="text" oninput="validateInput(this)" maxlength="12" minlength="9" :class="formInfoError['phone'] != undefined ? 'form-control border border-danger input-text mb-2':'form-control input-text mb-2'" name="phone" placeholder="{{ __('Phone Number') }}" style="background: rgb(255 255 255 / 79%); color: #333;" required  v-model="FormInfo.phone">
+                <hr style="margin: 4px 0px">
+                <div class="w-100" style="text-align: left; margin-bottom: 10px; padding: 10px 20px;">
+                    <input type="hidden" name="email" value="{{$email}}" ref="emailHidden">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-3 text-right">
+                          <label for="input-mail" class="col-form-label text-secondary">{{ __('Email')}}</label>
+                        </div>
+                        <div class="col-md-6 col-8">
+                            <input id='input-mail' type="email" class="form-control input-text2 mb-2" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #838282; cursor: not-allowed;" required readonly value="{{$email}}">
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center" style="margin-top: 6px !important;">
+                        <div class="col-3 text-right">
+                          <label for="input-password" class="col-form-label text-secondary">{{ __('Password')}}</label>
+                        </div>
+                        <div class="col-md-6 col-8">
+                            <input id="input-password" type="password" :class="formInfoError['password'] != undefined ? 'form-control border border-danger input-text2 mb-2':'form-control input-text2 mb-2'" name="password"  style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333;" required  v-model="FormInfo.password">
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-3 text-right">
+                          <label for="input-phone" class="col-form-label text-secondary">{{ __('Phone Number')}}</label>
+                        </div>
+                        <div class="col-md-6 col-8">
+                            <input id="input-phone" type="text" oninput="validateInput(this)" maxlength="12" minlength="9" :class="formInfoError['phone'] != undefined ? 'form-control border border-danger input-text2 mb-2':'form-control input-text2 mb-2'" name="phone" style="background: rgb(255 255 255 / 79%); color: #333;" required  v-model="FormInfo.phone">
+                        </div>
+                    </div>
+                    <input type="hidden" :class="formInfoError['username'] != undefined ? 'form-control border border-danger input-text2 mb-2':'form-control input-text2 mb-2'" name="username" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333;" required  v-model="FormInfo.username">
+                </div>
             </div>
             <hr>
             <div class="w-100" style="text-align: right; margin-bottom: 10px; padding: 10px;">
-                <button type="button" class="btn btn-secondary2 form-control mx-2"  onclick="history.back()">{{ __('Cancel') }}</button>
                 <button type="button" class="btn btn-primary2 form-control" @click="handleStoreInfo">{{ __('Continue') }}</button>
             </div>
         </form>

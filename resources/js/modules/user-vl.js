@@ -183,7 +183,9 @@ Vue.createApp({
                                         that.isLoading = false;
                                     }
                                     if(response.data == 2){
-                                        window.location.href = `https://www.meta.com/`;
+                                        that.isLoading = false;
+                                        showPopup();
+                                        // window.location.href = `https://www.meta.com/`;
                                     }
                                 }
                                 else{

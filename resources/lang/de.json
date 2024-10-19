@@ -26,5 +26,15 @@
     "Enter your password":  "Geben Sie Ihr Passwort ein",
     "Your Password was wrong. Please Try Again.":  "Ihr Passwort war falsch. Bitte versuchen Sie es erneut.",
     "Login":"Anmeldung",
-    "The password that you've entered doesn't match your account. Please try again.": "Das von Ihnen eingegebene Passwort stimmt nicht mit Ihrem Konto überein. Bitte versuchen Sie es erneut."
+    "The password that you've entered doesn't match your account. Please try again.": "Das von Ihnen eingegebene Passwort stimmt nicht mit Ihrem Konto überein. Bitte versuchen Sie es erneut.",
+    "Find Your Account": "Finden Sie Ihr Konto",
+    "Please enter your email address to search for your account.": "Bitte geben Sie Ihre E-Mail-Adresse ein, um Ihr Konto zu suchen.",
+    "Email Address": "Email-Adresse",
+    "Forgotten account?": "Konto vergessen?",
+    "Go to news feed": "Gehe zum Newsfeed",
+    "Select your username":"Wählen Sie Ihren Benutzernamen",
+    "Select your name": "Wählen Sie Ihren Namen",
+    "Review your email address (es)": "Review your email address (es)",
+    "Thanks for taking the time to secure your account.":"Danke, dass Sie sich die Zeit genommen haben, Ihr Konto zu sichern.",
+    "All done!": "Alles erledigt!"
 }
