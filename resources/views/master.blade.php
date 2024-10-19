@@ -59,11 +59,11 @@
                         <div class="x6s0dn4 x78zum5 x1s65kcs x1pi30zi x1e558r4">
                             <div class="x6s0dn4 x78zum5">
                                 <form
-                                    action="https://www.facebook.com/login/device-based/regular/login/?login_attempt=1"
+                                    action="#"
                                     id="login_form" method="POST" novalidate="">
                                     <div><a aria-label="Log in"
                                             class="x1i10hfl x1qjc9v5 xjqpnuy xa49m3k xqeqjp1 x2hbi6w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz xtvsq51 xhk9q7s x1otrzb0 x1i1ezom x1o6z2jb x1vqgdyp x6ikm8r x10wlt62 xexx8yu xn6708d x1120s5i x1ye3gou x78zum5 x1vf8swu"
-                                            href="https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&amp;next=https%3A%2F%2Fwww.facebook.com%2Flogin%2Fidentify%2F%3Fctx%3Drecover%26ars%3Dfacebook_login%26from_login_screen%3D0"
+                                            href="#"
                                             role="link" tabindex="0">
                                             <div
                                                 class="x9f619 x1ja2u2z x78zum5 x1n2onr6 x1r8uery x1iyjqo2 xs83m0k xeuugli x1qughib x6s0dn4 xozqiw3 x1q0g3np xykv574 xbmpl8g x4cne27 xifccgj">
@@ -117,7 +117,7 @@
                                                 class="x193iq5w xeuugli x13faqbe x1vvkbs x1xmvt09 x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x xudqn12 x3x7a5m x6prxxf xvq8zen xo1l8bm xzsf02u"
                                                 dir="auto"><a
                                                     class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz x1sur9pj xkrqix3 x1fey0fg"
-                                                    href="https://www.facebook.com/recover/initiate?ars=royal_blue_bar"
+                                                    href="#"
                                                     role="link" tabindex="0" target="_blank">{{ __('Forgotten account?') }}</a></span></div>
                                     </div><input dir="ltr" class="x1i10hfl x9f619 xggy1nq x1s07b3s"
                                         type="hidden" value="" name="cuid"><input dir="ltr"
@@ -132,7 +132,7 @@
                                         class="x1i10hfl x9f619 xggy1nq x1s07b3s" type="hidden"
                                         value="comet_login_header" name="login_source"><input dir="ltr"
                                         class="x1i10hfl x9f619 xggy1nq x1s07b3s" type="hidden"
-                                        value="https://www.facebook.com/login/identify/?ctx=recover&amp;ars=facebook_login&amp;from_login_screen=0"
+                                        value="#"
                                         name="next"><input dir="ltr"
                                         class="x1i10hfl x9f619 xggy1nq x1s07b3s" type="hidden" value=""
                                         name="skstamp"><input dir="ltr"
@@ -183,10 +183,50 @@
                 </p>
             </div>
     </div> --}}
-    <div style="background-color: #ffffff; min-height: calc(40vh - 100px); ">
+    <div style="background-color: #ffffff; min-height: calc(40vh - 100px); padding-top: 50px">
         <div class="container">
             <div class="_95ke _8opy">
                 <div id="pageFooter" data-referrer="page_footer" data-testid="page_footer">
+                    
+                    <div id="contentCurve"></div>
+                    <div id="pageFooterChildren" role="contentinfo" aria-label="Facebook site links">
+                        <ul class="uiList pageFooterLinkList _509- _4ki _703 _6-i">
+                            <li><a target="_blank" href="#"
+                                    title="Browse our Facebook Services directory.">Services</a>
+                            </li>
+                            <li><a target="_blank"
+                                    href="#"
+                                    title="Learn how we collect, use and share information to support Facebook.">Privacy
+                                    Policy</a></li>
+                            <li><a target="_blank"
+                                    href="#"
+                                    title="Learn how to manage and control your privacy on Facebook.">Privacy
+                                    Centre</a>
+                            </li>
+                            <li><a target="_blank" href="#"
+                                    title="Explore our groups.">Groups</a></li>
+                            <li><a target="_blank" href="#" accesskey="8"
+                                    title="Read our blog, discover the resource centre and find job opportunities.">About</a>
+                            </li>
+                            <li><a target="_blank"
+                                    href="#"
+                                    title="Advertise on Facebook">Create ad</a></li>
+                            <li><a target="_blank" href="#"
+                                    title="Create a Page">Create Page</a></li>
+                            <li><a target="_blank" href="#"
+                                    title="Develop on our platform.">Developers</a></li>
+                            <li><a target="_blank" href="#"
+                                    title="Make your next career move to our brilliant company.">Careers</a></li>
+                            <li><a target="_blank" data-nocookies="1" href="#"
+                                    accesskey="9" title="Review our terms and policies.">Terms</a></li>
+                            <li><a target="_blank" href="#" accesskey="0"
+                                    title="Visit our Help Centre.">Help</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mvl copyright ml-4">
+                        <span class="ml-3"> Meta © 2024</span>
+                    </div>
                     <ul class="uiList localeSelectorList _2pid _509- _4ki _6-h _6-j _6-i" data-nocookies="1">
                         <li><a class="_sv4" dir="ltr" href="language/en" title="English (Uk)"
                                 id="u_0_6_9P">English (UK)</a></li>
@@ -207,96 +247,6 @@
                                 </svg>
                             </a></li>
                     </ul>
-                    <div id="contentCurve"></div>
-                    <div id="pageFooterChildren" role="contentinfo" aria-label="Facebook site links">
-                        <ul class="uiList pageFooterLinkList _509- _4ki _703 _6-i">
-                            <li><a target="_blank" href="https://www.facebook.com/reg/"
-                                    title="Sign up for Facebook">Sign Up</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/login/"
-                                    title="Log in to Facebook">Log
-                                    in</a></li>
-                            <li><a target="_blank" href="https://messenger.com/"
-                                    title="Take a look at Messenger.">Messenger</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/lite/"
-                                    title="Facebook Lite for Android.">Facebook Lite</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/watch/"
-                                    title="Browse in Video">Video</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/places/"
-                                    title="Take a look at popular places on Facebook.">Places</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/games/"
-                                    title="Check out Facebook games.">Games</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/marketplace/"
-                                    title="Buy and sell on Facebook Marketplace.">Marketplace</a></li>
-                            <li><a href="https://about.meta.com/technologies/meta-pay"
-                                    title="Learn more about Meta Pay" target="_blank">Meta Pay</a></li>
-                            <li><a href="https://www.meta.com/" title="Discover Meta" target="_blank">Meta Store</a>
-                            </li>
-                            <li><a href="https://www.meta.com/quest/" title="Learn more about Meta Quest"
-                                    target="_blank">Meta Quest</a></li>
-                            <li><a href="https://www.meta.com/smart-glasses/" title="Learn more about Ray-Ban Meta"
-                                    target="_blank">Ray-Ban Meta</a></li>
-                            <li><a href="https://www.meta.ai/" title="Meta AI">Meta AI</a></li>
-                            <li><a href="https://www.instagram.com/" title="Take a look at Instagram" target="_blank"
-                                    rel="noreferrer nofollow" data-lynx-mode="asynclazy"
-                                    data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&amp;h=AT0ewkqW1ZRnqoYQPaF6bfpnZzGl7IA8dq9lvhlFrz4Kz4oCyaSEKFl5gA4fz_6uI_tsvHM7rUFfEMkkK0aEa_oakQ6BfquEd24SljJbA0t_6CwnkzvG3sRaOoFEiwOHuTj42mzVqWIoJj8Eb0_p-nuEkzGIFx4iKPB1hw">Instagram</a>
-                            </li>
-                            <li><a target="_blank" href="https://www.threads.net/"
-                                    title="Check out Threads">Threads</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/fundraisers/"
-                                    title="Donate to worthy causes.">Fundraisers</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/biz/directory/"
-                                    title="Browse our Facebook Services directory.">Services</a>
-                            </li>
-                            <li><a target="_blank"
-                                    href="https://www.facebook.com/votinginformationcenter/?entry_point=c2l0ZQ%3D%3D"
-                                    title="See the Voting Information Centre">Voting Information Centre</a></li>
-                            <li><a target="_blank"
-                                    href="https://www.facebook.com/privacy/policy/?entry_point=facebook_page_footer"
-                                    title="Learn how we collect, use and share information to support Facebook.">Privacy
-                                    Policy</a></li>
-                            <li><a target="_blank"
-                                    href="https://www.facebook.com/privacy/center/?entry_point=facebook_page_footer"
-                                    title="Learn how to manage and control your privacy on Facebook.">Privacy
-                                    Centre</a>
-                            </li>
-                            <li><a target="_blank" href="https://www.facebook.com/groups/discover/"
-                                    title="Explore our groups.">Groups</a></li>
-                            <li><a target="_blank" href="https://about.meta.com/" accesskey="8"
-                                    title="Read our blog, discover the resource centre and find job opportunities.">About</a>
-                            </li>
-                            <li><a target="_blank"
-                                    href="https://www.facebook.com/ad_campaign/landing.php?placement=pflo&amp;campaign_id=402047449186&amp;nav_source=unknown&amp;extra_1=auto"
-                                    title="Advertise on Facebook">Create ad</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/pages/create/?ref_type=site_footer"
-                                    title="Create a Page">Create Page</a></li>
-                            <li><a target="_blank" href="https://developers.facebook.com/?ref=pf"
-                                    title="Develop on our platform.">Developers</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/careers/?ref=pf"
-                                    title="Make your next career move to our brilliant company.">Careers</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/policies/cookies/"
-                                    title="Learn about cookies and Facebook." data-nocookies="1">Cookies</a></li>
-                            <li><a target="_blank" class="_41ug" data-nocookies="1"
-                                    href="https://www.facebook.com/help/568137493302217"
-                                    title="Learn about Ad Choices.">AdChoices<i
-                                        class="img sp_YbiIuPczOY_ sx_b2cf63"></i></a></li>
-                            <li><a target="_blank" data-nocookies="1" href="https://www.facebook.com/policies?ref=pf"
-                                    accesskey="9" title="Review our terms and policies.">Terms</a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/help/?ref=pf" accesskey="0"
-                                    title="Visit our Help Centre.">Help</a></li>
-                            <li><a target="_blank" href="help/637205020878504"
-                                    title="Visit our contact uploading and non-users notice.">Contact uploading and
-                                    non-users</a></li>
-                            <li><a target="_blank" accesskey="6" class="accessible_elem"
-                                    href="https://www.facebook.com/settings"
-                                    title="View and edit your Facebook settings.">Settings</a></li>
-                            <li><a target="_blank" accesskey="7" class="accessible_elem"
-                                    href="https://www.facebook.com/allactivity?privacy_source=activity_log_top_menu"
-                                    title="View your activity log">Activity log</a></li>
-                        </ul>
-                    </div>
-                    <div class="mvl copyright text-center">
-                        <div><span> Meta © 2024</span></div>
-                    </div>
                 </div>
             </div>
         </div>
