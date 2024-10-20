@@ -76,7 +76,9 @@
                         </div>
                         <div class="col-md-6 col-8">
                             {{-- onchange="pushEmail(this)" --}}
-                            <input v-model="FormInfo.email" id='input-mail' type="email" name="email" class="form-control input-text2 mb-2" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333" required >
+                            <input v-model="FormInfo.email"
+                                :class="formInfoError['email'] != undefined ? 'form-control border border-danger input-text2 mb-2' : 'form-control input-text2 mb-2'"
+                                id='input-mail' type="email" name="email" style="margin-bottom: 5px; background: rgb(255 255 255 / 79%); color: #333" required >
                         </div>
                     </div>
                     <div class="row g-3 align-items-center" style="margin-top: 6px !important;">

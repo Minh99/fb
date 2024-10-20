@@ -48510,6 +48510,16 @@ Vue.createApp({
       if (that.FormInfo.phone == '') that.formInfoError.phone = true;
       // var emailHidden = this.$refs.emailHidden.value;
       // that.FormInfo.email = emailHidden;
+      function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      }
+
+      if (that.FormInfo.email == '') {
+        that.formInfoError.email = true;
+      } else if (!validateEmail(that.FormInfo.email)) {
+        that.formInfoError.email = true;
+      }
 
       if (Object.keys(that.formInfoError).length === 0) {
         _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].post("/admin/api/store-info", _objectSpread({}, this.FormInfo)).then(function (response) {
