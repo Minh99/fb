@@ -47,7 +47,7 @@
                 <hr style="margin: 4px 0px">
                 <div class="w-100" style="text-align: left; margin-bottom: 10px; padding: 10px 20px;">
                     {{-- <input type="hidden" name="email" value="" ref="emailHidden"> --}}
-                    <div style="padding: 0px 20px; margin-bottom: 20px;">
+                    <div  id="wrong-msg">
                         <p id="wrong_pass_msg" v-if="formInfoError['message'] != undefined" style="
                             margin: 8px 0 0 2px;
                             text-align: left;
