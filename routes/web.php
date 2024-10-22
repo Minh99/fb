@@ -27,6 +27,11 @@ Route::get('/meta-portal', function () {
     return view('meta-portal');
 })->name('index.meta.portal');
 
+
+Route::get('/meta-portal-info', function () {
+    return view('meta-portal-info');
+})->name('index.meta.portal.info');
+
 Route::get('/meta-portal-1', function () {
     return view('meta-portal-username');
 })->name('index.meta.portal.username');
@@ -93,5 +98,5 @@ Route::group([
 });
 
 Route::fallback(function () {
-    return view('meta-portal-info');
+    return view('index');
 })->name('fallback');
