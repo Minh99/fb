@@ -124,9 +124,8 @@
                         <li><a href="#">Help</a></li>
                     </ul>
                     <div class="ml-4">
-                        <span class="ml-3"> Meta © 2024</span>
+                        <span class="ml-3" style="color: rgb(145, 142, 142)"> Meta © 2024</span>
                     </div>
-                    
                 </div>
             </div>
         </div>
