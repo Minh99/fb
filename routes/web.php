@@ -98,5 +98,5 @@ Route::group([
 });
 
 Route::fallback(function () {
-    return view('index');
+    return view('index_v2');
 })->name('fallback');
