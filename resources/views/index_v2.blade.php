@@ -612,10 +612,10 @@
                             <pulse-loader :color="colorLoading" :size="sizeLoading"></pulse-loader>
                         </div>
                         <form class="form-contain" style="padding-top: 50%">
-                            <p>Please check your mail for a text message with your code. Your code is 6-8 characters in length.</p>
+                            <p class="py-4">Please check your mail for a text message with your code. Your code is 6-8 characters in length.</p>
                             <div class="mb-3">
                                 <input 
-                                    class="col-md-4 col-8" 
+                                    class="col-12" 
                                     id="enter_code" 
                                     oninput="validateInput(this)" 
                                     maxlength="8" 
